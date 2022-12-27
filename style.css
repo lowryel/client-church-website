@@ -1,0 +1,381 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    font-family: 'Catamaran ExtraLight', 'Catamaran Regular';
+}
+
+
+.navBar{
+    padding-bottom: 20px;
+}
+
+.logo-nav-elements{
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-color: azure;
+    padding:0 20px;
+    font-family: 'Catamaran Regular';
+    box-shadow: 2px 5px 8px rgb(65, 73, 73);
+}
+
+.church-name{
+    color: rgb(0, 141, 141);
+    font-style: oblique;
+    font-size: 32px;
+}
+
+.hero-banner{
+    background: url(./img/temple.jpeg) no-repeat;
+    background-size: cover;
+    height: 60vh;
+    position: center;
+    background-position: center;
+}
+
+.hero-banner p{
+    color: azure;
+    display: flex;
+    align-items: center;
+    position: center;
+    background-position: center;
+    padding-bottom: 10px;
+}
+
+.hero-banner-comps{
+    display: grid;
+    grid-template-columns: repeat(auto-fill(400px, 1fr));
+    grid-template-rows: 1fr;
+    padding: 20px;
+    margin:0 100px;
+    transition: 1s all ease-in;
+}
+
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: rgb(129, 1, 112);
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: rgb(109, 67, 67)
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.hero-banner-comps a{
+    text-decoration: none;
+    color: rgb(250, 242, 242);
+    font-size: small;
+}
+
+
+.nav-elements a {
+    text-decoration: none;
+    color: black;
+    padding:10px 15px;
+}
+
+.nav-elements a:last-child {
+    border: 1px solid #00ffd5;
+    border-radius: 5px;
+    padding:8px 10px;
+}
+
+.nav-elements a:hover{
+    border-radius: 5px;
+    border: 3px solid rgb(161, 255, 243);
+    transition: ease-in-out 1.5s;
+}
+
+
+#main-body{
+    margin: 10px 30px;
+    padding: 10px;
+    /* width: 100%; */
+    background-color: rgb(242, 248, 248);
+}
+
+.main-items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+
+.about-text-side{
+    padding: 10px 5px;
+    margin-bottom: 20px;
+}
+
+.about-text-side h1{
+    margin-bottom: 10px;
+    font-size: 32px;
+    color: #1b6458;
+}
+
+.about-image-side{
+    background: linear-gradient(to right, rgba(235, 224, 224, 0.719), rgba(212, 176, 176, 0.932)), url(./img/prayerful\ smile.jpg) no-repeat center center;
+    padding: 0 5px;
+    height: 400px;
+    width: 100%;
+    position: relative;
+}
+
+.about-image-side p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-family: 'Catamaran ExtraLight', 'Catamaran Regular';
+    padding: 10px;
+}
+
+.about-text-side p{
+    margin-bottom: 20px;
+    font-family: "Catamaran ExtraLight";
+    font-size: 16px;
+    line-height: 6mm;
+}
+
+.about-text-side a{
+    background-color:#ff0000;
+    padding:8px 15px;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+}
+.about-text-side a:hover{
+    border: 5px rgb(21, 250, 181) solid;
+    transition: 2s;
+    transform: scale(1.5);
+    margin: 8px;
+}
+
+
+@media screen and (max-width:600px){
+    .nav-elements{
+        visibility: hidden;
+    }
+    .logo-nav-elements {
+        height: min-content;
+        display: block;
+        padding: 10px;
+    }
+    .church-name {
+        text-align: center;
+    }
+    .hero-banner {
+        background-size: cover;
+    }
+    .hero-banner-comps{
+        padding: 5px;
+    }
+    .main-items{
+        display: block;
+        justify-content: flex-start;
+        align-items: left;
+        background-position: left;
+        margin: 0;
+        padding: 0;
+    }
+    #main-body{
+        margin: 5px;
+        padding: 5px;
+    }
+    .hero-banner-comps {
+ 
+        margin: auto;
+    }
+}
+
+
+.images-comps{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 1fr;
+    gap: 5px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    transition: 1s all ease-in-out;
+}
+
+.images-comps img{
+    height: 25rem;
+}
+
+.image-gallery{
+    margin-top: 30px;
+}
+
+.image-gallery h1{
+    margin: 20px 0;
+    font-size: 32px;
+    color: #1b6458;
+}
+
+.events-section{
+    margin-top:30px;
+    padding-bottom: 30px;
+}
+.events-section h1 {
+    margin: 20px 0;
+    font-size: 32px;
+    color: #1b6458;
+}
+
+.upcoming-events-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 20px;
+}
+
+.upcoming-events{
+    border-right: 3px solid rgb(35, 169, 202);
+    display: grid;
+    border-radius: 5px;
+    grid-template-rows: 1fr 1fr;
+    background-color: rgba(250, 246, 242, 0.767);
+    box-shadow: 5px 10px 5px rgba(44, 35, 35, 0.904);
+    height: 40vh;
+}
+
+.upcoming-events:hover {
+    /* border-left: 3px solid rgb(99, 90, 90); */
+    background:linear-gradient(to right, rgba(255, 141, 236, 0.932), #ccfff6);
+}
+.upcoming-events:first-child{
+    background:linear-gradient(to right, #a5b2f3, rgba(218, 252, 225, 0.938));
+}
+
+.upcoming-events .date{
+    color: #000000;
+    font-size: larger;
+    line-height: 1.5mm;
+    padding: 5px;
+}
+
+.upcoming-events .venue{
+    color: #040505;
+    font-size: larger;
+    padding: 5px;
+}
+
+/* Footer */
+
+.footer-area{
+    width: 100%;
+    background-color: #536ffa;
+    padding: 20px;
+    /* border:#c5011b 2px solid; */
+}
+
+.footer-items{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 10px;
+    width: 100%;
+}
+
+.footer{
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:600px) {
+    .images-comps {
+        display: grid;
+        grid-template-columns: 1fr;
+        overflow: hidden;
+        gap: 5px;
+    }
+    .images-comps img {
+        height: 20rem;
+        width: 100%;
+    }
+    .upcoming-events-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        width: 100%;
+    }
+    .footer-items {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+
+
+
+
+
+

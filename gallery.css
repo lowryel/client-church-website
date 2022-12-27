@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Catamaran ExtraLight', 'Catamaran Regular';
+}
+
+
+.navBar {
+    /* padding-bottom: 20px; */
+}
+
+.logo-nav-elements {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-color: azure;
+    padding: 0 20px;
+    font-family: 'Catamaran Regular';
+    box-shadow: 2px 5px 8px rgb(65, 73, 73);
+}
+
+.church-name {
+    color: rgb(0, 141, 141);
+    font-style: oblique;
+    font-size: 32px;
+}
+
+.nav-elements a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+
+.nav-elements a:last-child {
+    border: 1px solid #00ffd5;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+.nav-elements a:hover {
+    border-radius: 5px;
+    border: 3px solid rgb(161, 255, 243);
+    transition: ease-in-out 1.5s;
+}
+
+@media screen and (max-width:600px) {
+    .nav-elements {
+        visibility: hidden;
+    }
+
+    .logo-nav-elements {
+        height: min-content;
+        display: block;
+        padding: 10px;
+    }
+
+    .church-name {
+        text-align: center;
+    }
+
+}
+
+/* main gallery images */
+.gallery h1{
+    font-size: 32px;
+    text-align: center;
+}
+
+.gallery {
+    margin: 30px 30px;
+}
+
+.main-gallery{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto 1fr;
+    gap: 5px;
+}
+
+
+.main-left-img-slide{
+    display: block !important;
+    background-color: aqua;
+    gap: 5px;
+}
+
+.main-right-img-slide{
+    background-color: blanchedalmond;
+}
+
+.main-right-img-slide img{
+    height: 100%;
+    width: 100%;
+}
+.main-right-img-slide img:hover {
+    transform: scaleX(1.1);
+    transition: 1s;
+}
+
+.bottom-img-block{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: blueviolet;
+}
+
+.top-img-block{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+    margin-bottom: 5px;
+}
+
+
+@media screen and (max-width:480px){
+    .top-img-block {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr;
+    }
+}
+
+.top-img-block img{
+    height: 200px;
+    width: 100%;
+}
+.top-img-block img:hover {
+    transform: scaleX(1.1);
+    transition: 1s;
+}
+
+.full-left-img img{
+    height: 100%;
+    width: 100%;
+}
+.full-left-img img:hover {
+    transform: scaleX(1.1);
+    transition: 1s;
+}
+
+
+.block-bottom-img img{
+    height: 250px;
+    width: 100%;
+}
+
+.block-bottom-img img:hover{
+    transform: scaleX(1.1);
+    transition: 1s;
+}
+
+.block-bottom-img{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    gap: 5px;
+}
+
+
+
+/* Footer section */
+.footer-area {
+    width: 100%;
+    background-color: #536ffa;
+    padding: 20px;
+    /* border:#c5011b 2px solid; */
+}
+
+.footer-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 10px;
+    width: 100%;
+}
+
+.footer {
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:600px) {
+
+    .footer-items {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+    .gallery {
+        margin: 5px;
+    }
+    .main-gallery {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .bottom-img-block {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
+
+}

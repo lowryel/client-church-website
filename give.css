@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    font-family: 'Catamaran ExtraLight', 'Catamaran Regular';
+}
+
+
+.navBar {
+    padding-bottom: 20px;
+}
+
+.logo-nav-elements {
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background-size: cover;
+    background-color: azure;
+    padding: 0 20px;
+    font-family: 'Catamaran Regular';
+    box-shadow: 2px 5px 8px rgb(65, 73, 73);
+}
+
+.church-name {
+    color: rgb(0, 141, 141);
+    font-style: oblique;
+    font-size: 32px;
+}
+
+.nav-elements a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+}
+
+.nav-elements a:last-child {
+    border: 1px solid #00ffd5;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+.nav-elements a:hover {
+    border-radius: 5px;
+    border: 3px solid rgb(161, 255, 243);
+    transition: ease-in-out 1.5s;
+}
+
+
+@media screen and (max-width:600px) {
+    .nav-elements {
+        visibility: hidden;
+    }
+
+    .logo-nav-elements {
+        height: min-content;
+        display: block;
+        padding: 10px;
+    }
+
+    .church-name {
+        text-align: center;
+    }
+
+}
+
+
+
+
+
+/* Footer section */
+.footer-area {
+    width: 100%;
+    background-color: #536ffa;
+    padding: 20px;
+    /* border:#c5011b 2px solid; */
+}
+
+.footer-items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    padding: 10px;
+    width: 100%;
+}
+
+.footer {
+    margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:600px) {
+
+    .footer-items {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+}
