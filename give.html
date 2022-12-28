@@ -12,7 +12,10 @@
     <section id="parentComponent">
         <header class="navBar">
             <div class="logo-nav-elements">
-                <h1 class="church-name">PowerMan Ministries</h1>
+                <div class="nav-menu-items">
+                    <img id="menu-img" style="align-items: center;" src="./img/logo.jpg" alt="">
+                    <h1 class="church-name">PowerMan Ministries</h1>
+                </div>
                 <nav class="navigation">
                     <div class="nav-elements">
                         <a class="nav-link" href="index.html">Home</a>
@@ -57,9 +60,51 @@
         </div>
     </footer>
 <!-- Lazy loading plugin -->
-    <script src="">
-        const observer = lozad();
-        observer.observe();
+    <script>
+        const menu = document.querySelector("#menu-img");
+        const navbar = document.querySelector(".nav-elements");
+
+        function mobileMenu (){
+            if (navbar.style.visibility == 'hidden'){
+                navbar.style.visibility = 'visible';
+                navbar.style.transition = 'all 1s';
+            }else{
+                navbar.style.visibility = 'hidden';
+                navbar.style.transition = '1s';
+            }
+        }
+        menu.addEventListener("click", mobileMenu);
+
+
+        document.addEventListener("DOMContentLoaded", function() {
+
+            var lazyloadImages;
+
+            if ("IntersectionObserver" in window) {
+
+                lazyloadImages = document.querySelectorAll(".lazy");
+
+                var imageObserver = new IntersectionObserver(function(entries, observer) {
+
+                    entries.forEach(function(entry) {
+
+                        if (entry.isIntersecting) {
+
+                            var image = entry.target;
+
+                            image.src = image.dataset.src;
+
+                            image.classList.remove("lazy");
+
+                            imageObserver.unobserve(image);
+
+                        }
+
+                    });
+
+                });
+            }
+        })
     </script>
 </body>
 </html>

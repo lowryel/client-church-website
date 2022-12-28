@@ -26,6 +26,11 @@ body {
     font-family: 'Catamaran Regular';
     box-shadow: 2px 5px 8px rgb(65, 73, 73);
 }
+.logo-nav-elements img {
+    visibility: hidden;
+    width: 35px;
+    height: 30px;
+}
 
 .church-name {
     color: rgb(0, 141, 141);
@@ -50,6 +55,17 @@ body {
     border: 3px solid rgb(161, 255, 243);
     transition: ease-in-out 1.5s;
 }
+
+.nav-menu-items {
+    display: flex;
+}
+
+.nav-menu-items img {
+    display: none;
+    justify-content: space-between;
+}
+
+
 /* main body section */
 .know-about-us {
     margin: 30px 30px;
@@ -111,12 +127,52 @@ body {
 @media screen and (max-width:600px) {
     .nav-elements {
         visibility: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        background-color: #6a6e6d;
+        height: 50%;
+        width: 80%;
+        z-index: 1;
+        background-position: left;
+        position: absolute;
+        padding-bottom: 30px;
+        transition: ease-in-out 1s;
+        padding: 20px 0;
+        margin: 0;
+    }
+
+    .nav-elements a {
+        margin: 5px 20px;
+        width: 50%;
+        height: max-content;
+    }
+    .nav-elements a:hover {
+        background-color: #eefdfb;
     }
 
     .logo-nav-elements {
         height: min-content;
         display: block;
-        padding: 10px;
+        padding: 0px;
+    }
+
+    .logo-nav-elements img {
+        visibility: visible;
+        width: 35px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        background-color: #00ffd5;
+        padding: 2px;
+    }
+    .nav-menu-items {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        padding: 5px;
     }
 
     .church-name {
