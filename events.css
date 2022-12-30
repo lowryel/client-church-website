@@ -23,7 +23,7 @@ body {
     background-size: cover;
     background-color: azure;
     padding: 0 20px;
-    box-shadow: 2px 5px 8px rgb(65, 73, 73);
+    box-shadow: 2px 5px 8px rgb(118, 128, 128);
     font-family: 'Catamaran Regular';
     scroll-behavior: smooth;
 }
@@ -106,6 +106,16 @@ body {
     margin: 30px 0;
     text-decoration: none;
     color: black;
+}
+
+.fade-in {
+    opacity: 0;
+    tansition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transition: all 1s;
 }
 
 @media screen and (max-width:600px) {
@@ -210,7 +220,7 @@ body {
 /* Footer section */
 .footer-area {
     width: 100%;
-    background-color: #536ffa;
+    background-color: #9aa2c9;
     padding: 20px;
 }
 

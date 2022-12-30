@@ -124,6 +124,16 @@ body {
     text-decoration: underline;
 }
 
+.fade-in {
+    opacity: 0;
+    tansition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transition: all 1s;
+}
+
 @media screen and (max-width:600px) {
     .nav-elements {
         visibility: hidden;
@@ -203,7 +213,7 @@ body {
 /* Footer section */
 .footer-area {
     width: 100%;
-    background-color: #536ffa;
+    background-color: #9aa2c9;
     padding: 20px;
 }
 

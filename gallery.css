@@ -64,6 +64,16 @@ body {
     border: 3px solid rgb(161, 255, 243);
     transition: ease-in-out 1.5s;
 }
+.fade-in {
+    opacity: 0;
+    tansition: opacity 250ms ease-in;
+}
+
+.fade-in.appear {
+    opacity: 1;
+    transition: all 1s;
+}
+
 
 @media screen and (max-width:600px) {
     .nav-elements {
@@ -142,7 +152,6 @@ body {
 
 .main-left-img-slide{
     display: block !important;
-    background-color: aqua;
     gap: 5px;
 }
 
@@ -162,7 +171,6 @@ body {
 .bottom-img-block{
     display: grid;
     grid-template-columns: 40% 60%;
-    background-color: blueviolet;
 }
 
 .top-img-block{
@@ -222,7 +230,7 @@ body {
 /* Footer section */
 .footer-area {
     width: 100%;
-    background-color: #536ffa;
+    background-color: #9aa2c9;
     padding: 20px;
     /* border:#c5011b 2px solid; */
 }

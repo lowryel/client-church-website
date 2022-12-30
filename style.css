@@ -24,7 +24,7 @@ body{
     background-color: azure;
     padding:0 20px;
     font-family: 'Catamaran Regular';
-    box-shadow: 2px 5px 8px rgb(65, 73, 73);
+    box-shadow: 2px 5px 8px rgb(106, 124, 124);
 }
 
 .logo-nav-elements img{
@@ -229,8 +229,20 @@ body{
     margin: 8px;
 }
 
+.fade-in{
+    opacity: 0;
+    tansition: opacity 250ms ease-in;
+}
+.fade-in.appear{
+    opacity: 1;
+    transition: all 1s;
+}
+
 
 @media screen and (max-width:600px){
+    .fade-in.show {
+        opacity: 1;
+    }
     .nav-elements{
         visibility: hidden;
         display: grid;
@@ -268,7 +280,7 @@ body{
         justify-content: center;
         align-items: center;
         margin: 0;
-        background-color: #00ffd5;
+        background-color: #00ffd52a;
         padding: 2px;
     }
     .nav-menu-items{
@@ -351,7 +363,7 @@ body{
     border-radius: 5px;
     grid-template-rows: 1fr 1fr;
     background-color: rgba(250, 246, 242, 0.767);
-    box-shadow: 5px 10px 5px rgba(44, 35, 35, 0.904);
+    box-shadow: 5px 10px 20px rgba(128, 112, 112, 0.904);
     height: 40vh;
 }
 
@@ -380,7 +392,7 @@ body{
 
 .footer-area{
     width: 100%;
-    background-color: #536ffa;
+    background-color: #9aa2c9;
     padding: 20px;
     /* border:#c5011b 2px solid; */
 }

@@ -32,22 +32,22 @@
                 <h1>Photo</h1>
                 <div class="main-gallery">
                     <div class="main-left-img-slide">
-                        <div class="top-img-block">
-                            <img src="./img/prayerful smile.jpg" alt="left photo">
-                            <img src="./img/beautiful worship.jpg" alt="right photo">
+                        <div class="top-img-block fade-in">
+                            <img class="fade-in" src="./img/prayerful smile.jpg" alt="left photo">
+                            <img class="fade-in" src="./img/beautiful worship.jpg" alt="right photo">
                         </div>
                         <div class="bottom-img-block">
-                            <div class="full-left-img">
+                            <div class="full-left-img fade-in">
                                 <img src="./img/prayerful smile.jpg" alt="left">
                             </div>
 
                             <div class="block-bottom-img">
-                                <img src="./img/beautiful worship.jpg" alt="block 1">
-                                <img src="./img/prayerful smile.jpg" alt="block 2">
+                                <img class="fade-in" src="./img/beautiful worship.jpg" alt="block 1">
+                                <img class="fade-in" src="./img/prayerful smile.jpg" alt="block 2">
                             </div>
                         </div>
                     </div>
-                    <div class="main-right-img-slide">
+                    <div class="main-right-img-slide fade-in">
                         <img src="./img/beautiful worship.jpg" alt="full length right">
                     </div>                   
                 </div>
@@ -56,32 +56,34 @@
             </section>
         </main>
         
+    
+        <!-- Footer section -->
+        <footer class="footer-area">
+            <div class="footer-items">
+                <div class="footer lozad">
+                    <h2>Address</h2>
+                    <p>No. 121 Lagos Avenue Road</p>
+                    <p>EastSide Accra</p>
+                </div>
+                <div class="footer lozad">
+                    <h2>Church Hours</h2>
+                    <p>Days: Monday - Sunday</p>
+                    <p>Time: 8am - 4pm</p>
+                    <p>Phone: +233544910055</p>
+                </div>
+                <div class="footer lozad">
+                    <h2>Follow Us</h2>
+                    <span>
+                        <a href="#">Facebook</a>
+                        <a href="#">Twitter</a>
+                        <a href="#">Instagram</a>
+                    </span>
+                </div>
+            </div>
+        </footer>
     </section>
-    <!-- Footer section -->
-    <footer class="footer-area">
-        <div class="footer-items">
-            <div class="footer lozad">
-                <h2>Address</h2>
-                <p>No. 121 Lagos Avenue Road</p>
-                <p>EastSide Accra</p>
-            </div>
-            <div class="footer lozad">
-                <h2>Church Hours</h2>
-                <p>Days: Monday - Sunday</p>
-                <p>Time: 8am - 4pm</p>
-                <p>Phone: +233544910055</p>
-            </div>
-            <div class="footer lozad">
-                <h2>Follow Us</h2>
-                <span>
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Instagram</a>
-                </span>
-            </div>
-        </div>
-    </footer>
 <!-- Lazy loading plugin -->
+    <script src="script.js"></script>
     <script>
         const menu = document.querySelector("#menu-img");
         const navbar = document.querySelector(".nav-elements");
