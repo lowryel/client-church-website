@@ -6,63 +6,115 @@
 
 body {
     width: 100%;
-    font-family: 'Catamaran ExtraLight', 'Catamaran Regular';
+    font-family: 'TT Firs Neue', 'TT Firs Neue Light', 'TT Firs Neue Thin';
 }
 
+p {
+    font-family: 'TT Firs Neue Thin';
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'TT Firs Neue Light'
+}
 
 .navBar {
-    /* padding-bottom: 20px; */
+    padding-bottom: 20px;
 }
 
 .logo-nav-elements {
-    height: 5rem;
-    display: flex;
-    justify-content: space-between;
+    display: block;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     background-size: cover;
-    background-color: azure;
-    padding: 0 20px;
-    font-family: 'Catamaran Regular';
+    background-color: #c3e5e8;
+    font-family: 'TT Firs Neue Light';
     box-shadow: 2px 5px 8px rgb(65, 73, 73);
 }
+
 .logo-nav-elements img {
-    visibility: hidden;
     width: 35px;
     height: 30px;
 }
+
 .nav-menu-items {
-    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-menu-items img {
+
+.breadcrumb {
     display: none;
     justify-content: space-between;
 }
 
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px;
+}
+
+.logo img {
+    width: 400px;
+    height: 200px;
+}
+
+.nav-elements {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 0;
+}
+
+.nav-ele2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    padding: 8px 20px;
+}
+
 
 .church-name {
-    color: rgb(0, 141, 141);
+    color: rgb(2, 18, 39);
     font-style: oblique;
-    font-size: 32px;
+    font-size: 20px;
+    margin: 20px;
+    line-height: 30px;
 }
 
 .nav-elements a {
     text-decoration: none;
     color: black;
-    padding: 10px 15px;
+    padding: 5px 15px;
 }
 
-.nav-elements a:last-child {
-    border: 1px solid #00ffd5;
-    border-radius: 5px;
-    padding: 8px 10px;
+.nav-ele2 a {
+    background-color: #b5061f;
+    border-radius: 15px;
+    padding: 5px 20px;
 }
 
 .nav-elements a:hover {
     border-radius: 5px;
     border: 3px solid rgb(161, 255, 243);
-    transition: ease-in-out 1.5s;
+    transition: 1s;
+}
+
+.nav-buttons {
+    visibility: visible;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    background-color: #eadaca;
+    color: #021220;
 }
 .fade-in {
     opacity: 0;
@@ -81,15 +133,13 @@ body {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        background-color: #6a6e6d;
-        height: 50%;
+        background-color: #01305b;
+        height: 80%;
         width: 80%;
         z-index: 1;
         background-position: left;
         position: absolute;
         padding-bottom: 30px;
-        transition: ease-in-out 1s;
-        padding: 20px 0;
         margin: 0;
     }
     .nav-elements a:hover {
@@ -120,10 +170,21 @@ body {
         padding: 2px;
     }
     .nav-menu-items {
-        display: flex;
-        justify-content: space-between;
+        display: block;
+        justify-content: left;
+        align-items: flex-start;
         margin: 0;
         padding: 5px;
+    }
+    .mobile-nav-view a {
+        display: block;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .nav-ele2 {
+        display: flex;
+        justify-content: left;
+        align-items: flex-start;
     }
 
     .church-name {
@@ -131,6 +192,7 @@ body {
     }
 
 }
+
 
 /* main gallery images */
 .gallery h1{
@@ -156,7 +218,10 @@ body {
 }
 
 .main-right-img-slide{
-    background-color: blanchedalmond;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
 }
 
 .main-right-img-slide img{
@@ -209,7 +274,7 @@ body {
 
 
 .block-bottom-img img{
-    height: 250px;
+    height: 100%;
     width: 100%;
 }
 
@@ -230,9 +295,9 @@ body {
 /* Footer section */
 .footer-area {
     width: 100%;
-    background-color: #9aa2c9;
+    background-color: #01305b;
     padding: 20px;
-    /* border:#c5011b 2px solid; */
+    color: white;
 }
 
 .footer-items {

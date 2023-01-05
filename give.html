@@ -13,16 +13,29 @@
         <header class="navBar">
             <div class="logo-nav-elements">
                 <div class="nav-menu-items">
-                    <img id="menu-img" style="align-items: center;" src="./img/logo.jpg" alt="">
-                    <h1 class="church-name">PowerMan Ministries</h1>
+                    <div class="logo">
+                        <img src="./img/LOGO1 cropped.png" alt="LOGO">
+                        <!-- <div class="church-name">
+                            <h1>COFIE BEKOE</h1>
+                            <h1> MINISTRIES</h1>
+                            <p>Jesus to the World</p>                        
+                        </div>  -->
+                    </div>
+
+                    <img class="breadcrumb" id="menu-img" style="align-items: center;" src="./img/menu_img.png" alt="">
                 </div>
                 <nav class="navigation">
-                    <div class="nav-elements">
-                        <a class="nav-link" href="index.html">Home</a>
-                        <a class="nav-link" href="about.html">About</a>
-                        <a class="nav-link" href="gallery.html">Gallery</a>
-                        <a class="nav-link" href="events.html">Events</a>
-                        <a class="nav-link" href="give.html">Donation</a>
+                    <div class="nav-elements nav-buttons">
+                        <div class="mobile-nav-view">
+                            <a class="nav-link" href="index.html">Home</a>
+                            <a class="nav-link" href="about.html">About</a>
+                            <a class="nav-link" href="gallery.html">Gallery</a>
+                            <a class="nav-link" href="events.html">Events</a>
+                            <a class="nav-link" href="give.html">Give</a>
+                        </div>
+                        <div class="nav-ele2 mobile-nav-view">
+                            <a href="#">I'm New</a>
+                        </div>                    
                     </div>
                 </nav>
             </div>
@@ -67,10 +80,8 @@
         function mobileMenu (){
             if (navbar.style.visibility == 'hidden'){
                 navbar.style.visibility = 'visible';
-                navbar.style.transition = 'all 1s';
             }else{
                 navbar.style.visibility = 'hidden';
-                navbar.style.transition = '1s';
             }
         }
         menu.addEventListener("click", mobileMenu);

@@ -14,16 +14,30 @@
         <header class="navBar">
             <div class="logo-nav-elements">
                 <div class="nav-menu-items">
-                    <img id="menu-img" style="align-items: center;" src="./img/menu_img.png" alt="">
-                    <h1 class="church-name">PowerMan Ministries</h1>
+                    <div class="logo">
+                        <div>
+                            <img src="./img/LOGO1 cropped.png" alt="LOGO">
+                        </div>
+                        <!-- <div class="church-name">
+                            <h1>COFIE BEKOE</h1>
+                            <h1> MINISTRIES</h1>
+                            <p>Jesus to the World</p>                        
+                        </div>  -->
+                    </div>
+
+                    <img class="breadcrumb" id="menu-img" style="align-items: center;" src="./img/menu_img.png" alt="">
                 </div>
+
                 <nav class="navigation">
                     <div class="nav-elements">
                         <a class="nav-link" href="index.html">Home</a>
                         <a class="nav-link" href="about.html">About</a>
                         <a class="nav-link" href="gallery.html">Gallery</a>
                         <a class="nav-link" href="events.html">Events</a>
-                        <a class="nav-link" href="give.html">Donation</a>
+                        <a class="nav-link" href="give.html">Give</a>
+                    </div>
+                    <div class="nav-elements nav-ele2">
+                        <a href="#">I'm New</a>
                     </div>
                 </nav>
             </div>
@@ -133,13 +147,13 @@
     <script src="script.js"></script>
     <script>
         const menu = document.querySelector("#menu-img");
-        const navbar = document.querySelector(".nav-elements");
+        const navbar = document.querySelector(".navigation");
 
         function mobileMenu (){
-            if (navbar.style.visibility == 'hidden'){
-                navbar.style.visibility = 'visible';
-            }else{
+            if (navbar.style.visibility == 'visible'){
                 navbar.style.visibility = 'hidden';
+            }else{
+                navbar.style.visibility = 'visible';
             }
         }
         menu.addEventListener("click", mobileMenu);
