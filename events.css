@@ -204,7 +204,7 @@ h4 {
         align-items: flex-start;
     }
 
-    .logo-nav-elements img {
+    .breadcrumb {
         visibility: visible;
         width: 35px;
         height: 30px;
