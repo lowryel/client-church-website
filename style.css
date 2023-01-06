@@ -34,8 +34,8 @@ h1, h2, h3, h4 {
 }
 
 .logo img{
-    width:400px;
-    height:200px;
+    width:350px;
+    height:150px;
 }
 
 .navigation{
@@ -78,59 +78,6 @@ h1, h2, h3, h4 {
     transition: 1s all ease-in;
 }
 
-.glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: rgb(129, 1, 112);
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-}
-
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.glow-on-hover:active {
-    color: rgb(109, 67, 67)
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
 
 @keyframes glowing {
     0% {
@@ -152,6 +99,10 @@ h1, h2, h3, h4 {
     font-size: small;
 }
 
+.hero-banner-comps a:hover {
+    background-color: #c5e3e8;
+    transition:200ms;
+}
 
 .nav-elements{
     display: flex;
@@ -226,7 +177,7 @@ h1, h2, h3, h4 {
 .about-text-side h1{
     margin-bottom: 10px;
     font-size: 24px;
-    color: #1b6458;
+    color: #44a2bc;
 }
 
 .about-image-side{
@@ -278,8 +229,9 @@ h1, h2, h3, h4 {
 
 
 @media screen and (max-width:600px){
-    .fade-in.show {
+    .fade-in.appear {
         opacity: 1;
+        transition: all 1s;
     }
     .nav-elements{
         display: grid;
@@ -381,7 +333,7 @@ h1, h2, h3, h4 {
 .image-gallery h1{
     margin: 20px 0;
     font-size: 24px;
-    color: #1b6458;
+    color: #44a2bc;
 }
 
 .events-section{
@@ -391,7 +343,7 @@ h1, h2, h3, h4 {
 .events-section h1 {
     margin: 20px 0;
     font-size: 24px;
-    color: #1b6458;
+    color: #44a2bc;
 }
 
 .upcoming-events-section{
@@ -407,12 +359,11 @@ h1, h2, h3, h4 {
     border-radius: 5px;
     grid-template-rows: 1fr 1fr;
     background-color: rgba(250, 246, 242, 0.767);
-    box-shadow: 5px 10px 20px rgba(128, 112, 112, 0.904);
+    border: 1px solid rgb(179, 167, 167);
     height: 40vh;
 }
 
 .upcoming-events:hover {
-    /* border-left: 3px solid rgb(99, 90, 90); */
     background:linear-gradient(to right, rgba(255, 141, 236, 0.932), #ccfff6);
 }
 .upcoming-events:first-child{
@@ -453,6 +404,13 @@ h1, h2, h3, h4 {
 .footer{
     margin-bottom: 20px;
 }
+.social-links {}
+
+.social-links img {
+    width: 40px;
+    height: 30px;
+    color: #c3e5e8;
+}
 
 @media screen and (max-width:600px) {
     .images-comps {
@@ -471,6 +429,7 @@ h1, h2, h3, h4 {
         grid-template-rows: 1fr;
         width: 100%;
     }
+
     .footer-items {
         display: grid;
         grid-template-rows: 1fr;

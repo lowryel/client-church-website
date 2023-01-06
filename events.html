@@ -79,6 +79,7 @@
                         </div>
                         <h2>MEGAFEST LAUNCH</h2>
                         <img src="./img/the word.jpg" alt="event-two">
+
                     </div>
                     <div class="upcoming-event-objects fade-in">
                         <img src="./img/the word.jpg" alt="event-three">
@@ -87,7 +88,16 @@
                             <p>JUNE</p>
                         </div>
                         <h2>MEGAFEST LAUNCH</h2>
-                        <a href="#">RSVP</a>
+                        <button onclick="togglePopup()">RSVP</button>
+
+                        <div class="popup" id="popup-1">
+                            <div class="overlay"></div>
+                            <div class="content">
+                                <div class="close-btn" onclick="togglePopup()">&times;</div>
+                                <h1>Title</h1>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, quae unde, fugiat facere odio exercitationem quod, atque sunt tempore repellendus corrupti doloremque. Sint aliquam magni dolorem consequatur possimus architecto atque.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -111,10 +121,11 @@
             </div>
             <div class="footer lozad">
                 <h2>Follow Us</h2>
-                <span>
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Instagram</a>
+                <span class="social-links">
+                    <a href="#"><img src="./img/facebk.svg" alt=""></a>
+                    <a href="#"><img src="./img/twitter.svg" alt=""></a>
+                    <a href="#"><img src="./img/insta.svg" alt=""></a>
+                    <a href="#"><img src="./img/youtube.svg" alt=""></a>
                 </span>
             </div>
         </div>
@@ -122,6 +133,13 @@
 <!-- Lazy loading plugin -->
     <script src="script.js"></script>
     <script>
+
+        // RSVP popup box
+        function togglePopup(){
+            document.getElementById("popup-1").classList.toggle("active");
+        }
+
+        // menu button
         const menu = document.querySelector("#menu-img");
         const navbar = document.querySelector(".nav-elements");
 

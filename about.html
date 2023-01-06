@@ -134,10 +134,11 @@
             </div>
             <div class="footer">
                 <h2>Follow Us</h2>
-                <span>
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Instagram</a>
+                <span class="social-links">
+                    <a href="#"><img src="./img/facebk.svg" alt=""></a>
+                    <a href="#"><img src="./img/twitter.svg" alt=""></a>
+                    <a href="#"><img src="./img/insta.svg" alt=""></a>
+                    <a href="#"><img src="./img/youtube.svg" alt=""></a>
                 </span>
             </div>
         </div>
@@ -151,24 +152,22 @@
         function mobileMenu (){
             if (navbar.style.visibility == 'hidden'){
                 navbar.style.visibility = 'visible';
-                console.log("It's hidden")
             }else{
-                console.log("hidden")
                 navbar.style.visibility = 'hidden';
             }
             
         }
         menu.addEventListener("click", mobileMenu);
 
-        function resetMenu() {
-            if (window.innerWidth >=600){
-                navbar.style.display = 'grid';
-            }else if(window.innerWidth < 600){
-                navbar.style.display = 'none';
-            }
-        }
+        // function resetMenu() {
+        //     if (window.innerWidth >=600){
+        //         navbar.style.display = 'grid';
+        //     }else if(window.innerWidth < 600){
+        //         navbar.style.display = 'none';
+        //     }
+        // }
 
-        resetMenu();
+        // resetMenu();
 
         document.addEventListener("DOMContentLoaded", function() {
 

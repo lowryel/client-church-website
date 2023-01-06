@@ -61,8 +61,8 @@ h4 {
 }
 
 .logo img {
-    width: 400px;
-    height: 200px;
+    width: 350px;
+    height: 150px;
 }
 
 .nav-elements {
@@ -275,6 +275,15 @@ h4 {
     text-decoration: none;
     color: black;
 }
+.upcoming-event-objects button {
+    background-color: #ca0768;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
 
 /* Footer section */
 .footer-area {
@@ -296,7 +305,64 @@ h4 {
     margin-bottom: 20px;
 }
 
+/* POPUP for the RSVP */
+.popup .overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+    display: none;
+}
 
+.popup .content{
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    background-color: #44a2bc;
+    padding: 20px;
+    width: 450px;
+    height: 220px;
+    box-sizing: border-box;
+}
+
+.popup .close-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    background: #222;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.popup.active .overlay{
+    display: none;
+}
+.popup.active .content {
+    transition: all 300ms ease-in-out;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.social-links{
+
+}
+
+.social-links img{
+    width: 40px;
+    height: 30px;
+    color: #c3e5e8;
+}
 @media screen and (max-width:600px) {
 
     .footer-items {
@@ -313,6 +379,11 @@ h4 {
     }
     .upcoming-events {
         margin: 5px;
+    }
+    .popup .content {
+        padding: 20px;
+        width: 300px;
+        height: max-content;
     }
 
 }
