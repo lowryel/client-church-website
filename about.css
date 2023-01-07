@@ -78,7 +78,7 @@ h4 {
 
 .nav-elements a:hover {
     border-radius: 5px;
-    border: 3px solid rgb(161, 255, 243);
+    border: 1px solid rgb(161, 255, 243);
     transition: 1s;
 }
 
@@ -183,8 +183,8 @@ h4 {
 
     .nav-elements {
         visibility: hidden;
-        display: grid;
-        grid-template-columns: 1fr;
+        display: block;
+        justify-content: baseline;
         grid-template-rows: 2fr;
         background-color: #01305b;
         color: rgb(255, 255, 255);
@@ -193,24 +193,21 @@ h4 {
         z-index: 1;
         background-position: left;
         position: absolute;
-        padding-bottom: 30px;
+        padding: 20px 0;
         margin: 0;
     }
     .mobile-nav-view a{
         display: block;
-        justify-content: space-between;
+        justify-content: start;
         align-items: flex-start;
-    }
-
-    .nav-ele2 a {
-        position: absolute;
-        background-size: cover;
+        color: aliceblue;
+        line-height: 30px;
     }
 
     .nav-elements a {
-        margin: 5px 20px;
+        margin: 20px 30px;
         width: 50%;
-        height: max-content;
+        height: 100%;
     }
     .nav-ele2 {
         display: flex;
@@ -292,7 +289,7 @@ h4 {
 /* about */
 
 .contact-section h1{
-    font-size: 32px;
+    font-size: 24px;
 }
 .contact-form{
     display: grid;

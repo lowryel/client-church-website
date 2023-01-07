@@ -258,15 +258,19 @@ h1, h2, h3, h4 {
         margin: 5px 20px;
         width: 50%;
         height:max-content;
+        color: #eefdfb;
     }
+
     .nav-elements a:hover {
         background-color: #eefdfb;
     }
+
     .logo-nav-elements {
         height: min-content;
         display: block;
         padding: 0px;
     }
+
     .breadcrumb {
         visibility: visible;
         width: 35px;
@@ -310,7 +314,6 @@ h1, h2, h3, h4 {
         margin: auto;
     }
 }
-
 
 .images-comps{
     display: grid;

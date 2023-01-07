@@ -104,7 +104,7 @@ h4 {
 
 .nav-elements a:hover {
     border-radius: 5px;
-    border: 3px solid rgb(161, 255, 243);
+    border: 1px solid rgb(255, 230, 161);
     transition: 1s;
 }
 
@@ -130,8 +130,8 @@ h4 {
 @media screen and (max-width:600px) {
     .nav-elements {
         visibility: hidden;
-        display: grid;
-        grid-template-columns: 1fr;
+        display: block;
+        justify-content: baseline;
         grid-template-rows: auto;
         background-color: #01305b;
         height: 80%;
@@ -139,17 +139,22 @@ h4 {
         z-index: 1;
         background-position: left;
         position: absolute;
-        padding-bottom: 30px;
+        padding: 20px 0;
         margin: 0;
     }
-    .nav-elements a:hover {
-        background-color: #eefdfb;
+
+    .mobile-nav-view a{
+        display: block;
+        justify-content: start;
+        align-items: flex-start;
+        color: aliceblue;
+        line-height: 30px;
     }
 
     .nav-elements a {
-        margin: 5px 20px;
+        margin: 20px 30px;
         width: 50%;
-        height: max-content;
+        height: 100%;
     }
 
     .logo-nav-elements {
