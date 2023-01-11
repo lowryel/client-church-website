@@ -61,7 +61,7 @@ h4 {
 }
 
 .logo img {
-    width: 350px;
+    width: 310px;
     height: 150px;
 }
 
@@ -175,7 +175,7 @@ h4 {
         justify-content: baseline;
         grid-template-rows: auto;
         background-color: #01305b;
-        height: 80%;
+        height: 60%;
         width: 80%;
         z-index: 1;
         background-position: left;

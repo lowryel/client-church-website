@@ -60,7 +60,7 @@ h4 {
 }
 
 .logo img {
-    width: 350px;
+    width: 310px;
     height: 150px;
 }
 
@@ -134,7 +134,7 @@ h4 {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
-        height: 80%;
+        height: 60%;
         width: 80%;
         z-index: 1;
         background-position: left;
